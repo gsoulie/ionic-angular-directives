@@ -1,9 +1,9 @@
 # ionic-angular-directives
 
-* [hide-header.directive.ts](#hide-header)      
-* [animated-fab.directive.ts](#animated-fab)     
+* [hide-header.directive.ts](#hide-header-directive)      
+* [animated-fab.directive.ts](#animated-fab-directive)     
 
-## hide-header
+## hide-header directive
 
 Usage : 
 
@@ -44,7 +44,7 @@ Usage :
 }
 ````
 
-## animated-fab
+## animated-fab directive
 
 Usage : 
 
