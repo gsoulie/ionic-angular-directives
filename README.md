@@ -1,6 +1,9 @@
 # ionic-angular-directives
 
-## HideHeader
+* [hide-header.directive.ts](#hide-header)      
+* [animated-fab.directive.ts](#animated-fab)     
+
+## hide-header
 
 Usage : 
 
@@ -24,4 +27,60 @@ Usage :
     </ion-row>
   </div>
 </div>
+````
+
+*view.scss*
+````css
+.search-overlay {
+  margin: 20px;
+  width: 90%;
+
+  ion-row {
+    background: white;
+    margin-top: 40px;
+    box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+  }
+}
+````
+
+## animated-fab
+
+Usage : 
+
+*view.html*
+````html
+<ion-content scrollEvents="true" [appAnimatedFab]="fab">
+  <!-- some stuff here -->
+  
+  <ion-fab
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed">
+    <ion-fab-button #fab color="light">
+      <ion-icon name="pencil-outline" color="primary"></ion-icon>
+      <span>Compose</span>
+    </ion-fab-button>
+  </ion-fab>
+</div>
+````
+
+*view.scss*
+````css
+ion-fab-button {
+  width: 140px;
+  height: 48px;
+  --border-radius: 20px;
+  --box-shadow: 5px 12px 30px -8px rgba(0, 0, 0, 0.53);
+
+  ion-icon {
+    font-size: 20px;
+  }
+}
+
+// accéder aux propriétés shadow part (voir doc fab button)
+ion-fab-button::part(native) {
+  color: var(--ion-color-primary);
+
+}
 ````
