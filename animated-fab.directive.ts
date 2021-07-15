@@ -1,5 +1,5 @@
-import { AfterViewInit, Directive, HostListener, Input, Renderer2 } from '@angular/core';
-import { AnimationController, Animation, DomController } from '@ionic/angular';
+import { AfterViewInit, Directive, HostListener, Input } from '@angular/core';
+import { AnimationController, Animation } from '@ionic/angular';
 
 @Directive({
   selector: '[appAnimatedFab]'
@@ -10,10 +10,7 @@ export class AnimatedFabDirective implements AfterViewInit {
   expanded = true;
   shrinkAnimation: Animation;
 
-  constructor(
-    private renderer: Renderer2,
-    private domCtrl: DomController,
-    private animationCtrl: AnimationController) { }
+  constructor(private animationCtrl: AnimationController) { }
 
   // création d'un listener sur scroll
   @HostListener('ionScroll', ['$event']) onContentScroll($event: any) {
